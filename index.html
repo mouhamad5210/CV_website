@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamad Redwan | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Ensure image and text are properly aligned */
+        #about .about-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .photo-wrapper {
+            flex: 0 0 auto;
+            margin-right: 20px;
+        }
+
+        .about-content p {
+            flex: 1;
+            text-align: justify;
+        }
+
+        header h1, header p, header nav a {
+            color: #004080; /* Changed back to dark blue color */
+        }
+
+        @media (max-width: 768px) {
+            #about .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .photo-wrapper {
+                margin: 0 0 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mohamad Redwan</h1>
+            <p>IT Engineer Student | Programmer | Web Developer</p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="photo-wrapper">
+                    <img src="mohamad_redwan.jpg" alt="Mohamad Redwan">
+                </div>
+                <p>
+                    I am an engaged IT engineer student with expertise in programming, system architecture, and web development.
+                    Currently pursuing a bachelor's degree in Applied Computer Technology at OsloMet, I am passionate about creating
+                    innovative technological solutions. With several years of experience in IT support and development, I strive to
+                    solve complex challenges and enhance user experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><b style='color:#004080;'>Programming:</b> Java, Python, C++, Scheme, Kotlin, ASP.NET Core, C#</li>
+                <li><b style='color:#004080;'>Web Technologies:</b> CSHTML, HTML, React</li>
+                <li><b style='color:#004080;'>Databases:</b> MySQL, SQLite, LINQ</li>
+                <li><b style='color:#004080;'>APIs:</b> REST, JSON</li>
+                <li><b style='color:#004080;'>Tools:</b> Agile methods, Serilog, Android Studio</li>
+                <li><b style='color:#004080;'>Security:</b> Network Security, AR Data Modeling</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            
+            <!-- Web Application with ASP.Net Core -->
+            <div class="project">
+                <h3>
+                    <a href="webapp.html">Web Application with ASP.Net Core</a>
+                </h3>
+                <p>Developed a web application with real-time error handling, authentication, and API integrations.</p>
+            </div>
+    
+            <!-- My_Shop Web Application -->
+            <div class="project">
+                <h3>
+                    <a href="myshop.html">My_Shop Web Application</a>
+                </h3>
+                <p>Built a complete web application using ASP.Net Core, C#, CSHTML, HTML, React, and SQLite.</p>
+            </div>
+    
+            <!-- Surfing App -->
+            <div class="project">
+                <h3>
+                    <a href="surfingapp.html">Surfing App with Android Studio</a>
+                </h3>
+                <p>Collaborated in a team of six to develop a mobile application in Android Studio using Kotlin.</p>
+            </div>
+    
+            <!-- ASP Programming Language -->
+            <div class="project">
+                <h3>
+                    <a href="asp-language.html">Development of "ASP" Programming Language</a>
+                </h3>
+                <p>Co-led the creation of a new programming language named "ASP" using Java.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <section id="utdanning">
+        <div class="container">
+            <h2>Utdanning (Education)</h2>
+            <ul>
+                <li><b>2024 – Present:</b> Applied Computer Technology / OsloMet, Oslo</li>
+                <p>A three-year bachelor's program focused on designing and developing technological solutions emphasizing user-friendliness and universal design.</p>
+                
+                <li><b>2020 – Present:</b> Informatics: Programming and System Architecture / UiO, Oslo</li>
+                <p>Specialized in modeling and maintaining complex IT systems. Covered programming, operating systems, and IT theory, focusing on secure and efficient software development.</p>
+                
+                <li><b>2024:</b> Azure Fundamentals Certification</li>
+                <p>Completed an online course on fundamental concepts and services of the Azure platform.</p>
+                
+                <li><b>2009 – 2012:</b> BioMedical Engineering / Damascus University, Syria</li>
+                <p>Completed 3 of 5 years, with studies on optical and infrared radiation detection, remote sensing, and signal processing.</p>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:mhd010591@gmail.com">mhd010591@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/mouhamad5210" target="_blank">mouhamad5210</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/mohamad-redwan/" target="_blank">Mohamad Redwan</a></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Mohamad Redwan</p>
+    </footer>
+</body>
+</html>

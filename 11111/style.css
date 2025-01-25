@@ -1,0 +1,80 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #f4f4f4, #e3f2fd);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #003b70;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header .subheading {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+header nav a {
+    color: #ffcb3a;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.section {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #003b70;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #ffcb3a;
+    display: inline-block;
+}
+
+/* Grids */
+.skills-grid,
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background: #003b70;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}

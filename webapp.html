@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application with ASP.Net Core</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gallery styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 4px solid #004080;
+            border-radius: 5px;
+            cursor: pointer;
+            aspect-ratio: 1/1;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #ff0000;
+        }
+
+        /* Dark blue text for headings */
+        h2 {
+            color: #004080;
+        }
+
+        h3 {
+            color: #004080;
+        }
+
+        p {
+            color: #004080;
+        }
+
+        ul, li {
+            color: #004080;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Application with ASP.Net Core</h1>
+    </header>
+    <main>
+        <section>
+            <h2>About the Project</h2>
+            <p>This project is a robust <strong>Food Management Web Application</strong> built using <strong>ASP.Net Core</strong>. It streamlines food-related data management, featuring <strong>real-time error handling</strong>, <strong>secure authentication</strong>, and <strong>advanced filtering capabilities</strong>. The application is designed to prioritize <strong>scalability</strong>, <strong>reliability</strong>, and <strong>user experience</strong>.</p>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <a href="#" onclick="openModal('images/webapp1.png'); return false;">
+                    <img src="images/webapp1.png" alt="Web Application Screenshot 1">
+                </a>
+                <a href="#" onclick="openModal('images/webapp2.png'); return false;">
+                    <img src="images/webapp2.png" alt="Web Application Screenshot 2">
+                </a>
+                <a href="#" onclick="openModal('images/webapp3.png'); return false;">
+                    <img src="images/webapp3.png" alt="Web Application Screenshot 3">
+                </a>
+                <a href="#" onclick="openModal('images/webapp4.png'); return false;">
+                    <img src="images/webapp4.png" alt="Web Application Screenshot 4">
+                </a>
+                <a href="#" onclick="openModal('images/webapp5.png'); return false;">
+                    <img src="images/webapp5.png" alt="Web Application Screenshot 5">
+                </a>
+                <a href="#" onclick="openModal('images/webapp6.png'); return false;">
+                    <img src="images/webapp6.png" alt="Web Application Screenshot 6">
+                </a>
+                <a href="#" onclick="openModal('images/webapp7.png'); return false;">
+                    <img src="images/webapp7.png" alt="Web Application Screenshot 7">
+                </a>
+                <a href="#" onclick="openModal('images/webapp8.png'); return false;">
+                    <img src="images/webapp8.png" alt="Web Application Screenshot 8">
+                </a>
+            </div>
+            <!-- Modal for larger images -->
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage" alt="Large view of the image">
+            </div>
+        </section>
+
+        <section>
+            <h2>Detailed Project Description  <a href="https://github.com/mouhamad5210/WebApp.git" target="_blank"> GitHub
+            </a></h2>
+            <h3>Key Features and Modules</h3>
+            <ul>
+                <li>
+                    <strong>Authentication and User Management:</strong>
+                    <ul>
+                        <li>Utilized <strong>scaffolding</strong> for authentication, enabling secure user sign-up and login functionalities.</li>
+                        <li>Integrated a <strong>role-based access control system</strong> for fine-grained permissions and data security.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Food Items Management:</strong>
+                    <ul>
+                        <li>Implemented a comprehensive module for managing food items, allowing <strong>CRUD operations</strong> (Create, Read, Update, Delete).</li>
+                        <li>Developed filters to search food items by attributes like energy, fat, protein, and other nutritional values.</li>
+                        <li>Designed a dynamic user interface with dropdowns populated by food groups for ease of data entry and filtering.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Product Management:</strong>
+                    <ul>
+                        <li>Built a detailed product module, linking food items with companies.</li>
+                        <li>Enabled filtering of products based on nutritional values (e.g., energy, fat, carbohydrates, sodium) and company affiliation.</li>
+                        <li>Implemented company-specific views for streamlined management.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Real-time Error Handling:</strong>
+                    <ul>
+                        <li>Integrated <strong>Serilog</strong> for real-time logging and error monitoring.</li>
+                        <li>Captured application errors and performance data to improve system reliability and debugging efficiency.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Database and Data Persistence:</strong>
+                    <ul>
+                        <li>Designed a normalized database schema using <strong>Entity Framework Core</strong>.</li>
+                        <li>Applied <strong>migrations</strong> for version-controlled database updates, ensuring a smooth development process.</li>
+                        <li>Introduced <strong>table relationships</strong> and navigation properties for seamless data handling.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>User-friendly Frontend:</strong>
+                    <ul>
+                        <li>Designed an intuitive interface using <strong>Razor Pages</strong>.</li>
+                        <li>Provided user-friendly forms for food item and product management with <strong>inline validation</strong>.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Unit Testing and Reliability:</strong>
+                    <ul>
+                        <li>Followed the <strong>AAA (Arrange, Act, Assert)</strong> model for unit testing key components such as controllers and services.</li>
+                        <li>Ensured code quality and system reliability through automated tests.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Session Management:</strong>
+                    <ul>
+                        <li>Developed session helpers to manage user-specific data like company affiliation, enhancing the user experience.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Advanced Filtering and Navigation:</strong>
+                    <ul>
+                        <li>Implemented advanced <strong>search</strong> and <strong>filter functionalities</strong> for food items and products, enabling users to retrieve data based on specific criteria.</li>
+                        <li>Optimized performance for large datasets with <strong>repository patterns</strong> and asynchronous calls.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Technical Highlights</h3>
+            <ul>
+                <li><strong>Frameworks and Libraries:</strong> ASP.Net Core, Entity Framework Core, Serilog.</li>
+                <li><strong>Testing Tools:</strong> XUnit for unit testing, Moq for mocking dependencies during tests.</li>
+                <li><strong>Database:</strong> SQLite, with migrations for schema management.</li>
+                <li><strong>Frontend Technologies:</strong> Razor Pages and Bootstrap for responsive UI design. JavaScript and jQuery for client-side interactivity.</li>
+                <li><strong>Scalability:</strong> Modular architecture for easy maintenance and feature expansion.</li>
+            </ul>
+
+            <h3>Impact and Benefits</h3>
+            <p>This application delivers a <strong>secure</strong>, <strong>user-friendly</strong>, and <strong>reliable</strong> solution for managing food-related data, showcasing skills in <strong>full-stack development</strong> and system reliability.</p>
+        </section>
+
+        <section>
+            <h2>GitHub Repository</h2>
+            <p>
+                <a href="https://github.com/mouhamad5210/aspnetcore-webapp" target="_blank">
+                    View Source Code on GitHub
+                </a>
+            </p>
+        </section>
