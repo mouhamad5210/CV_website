@@ -4,12 +4,21 @@ import { useLanguage } from '@/context/LanguageContext';
 import Reveal from './Reveal';
 import SectionTitle from './SectionTitle';
 
+const UIO_LOGO = 'https://commons.wikimedia.org/wiki/Special:FilePath/UiO_logo.png';
+const OSLOMET_LOGO = 'https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Oslo_Metropolitan_University.svg';
+
 export default function Education() {
   const { t } = useLanguage();
   const ref = useRef(null);
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 65%', 'end 65%'] });
   const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+
+  const getLogo = (institution) => {
+    if (institution.includes('OsloMet')) return OSLOMET_LOGO;
+    if (institution.includes('UiO')) return UIO_LOGO;
+    return null;
+  };
 
   return (
     <section id="education" className="py-32 bg-white">
@@ -23,19 +32,27 @@ export default function Education() {
             <motion.div className="absolute left-0 top-0 w-px bg-accent origin-top" style={{ height: lineHeight }} />
           )}
           <ul className="space-y-16">
-            {t.education.items.map((edu, i) => (
-              <Reveal key={edu.institution} delay={i * 0.1}>
-                <li className="relative">
-                  <div className="absolute -left-[52px] md:-left-[68px] top-1 w-3 h-3 bg-accent rotate-45" />
-                  <p className="font-body text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">
-                    {edu.period} · {edu.location}
-                  </p>
-                  <h3 className="font-heading text-2xl text-foreground mb-1">{edu.institution}</h3>
-                  <p className="font-heading text-lg italic text-accent mb-3">{edu.degree}</p>
-                  <p className="font-body text-sm text-foreground/70 leading-relaxed max-w-xl">{edu.description}</p>
-                </li>
-              </Reveal>
-            ))}
+            {t.education.items.map((edu, i) => {
+              const logo = getLogo(edu.institution);
+              return (
+                <Reveal key={edu.institution} delay={i * 0.1}>
+                  <li className="relative">
+                    <div className="absolute -left-[52px] md:-left-[68px] top-1 w-3 h-3 bg-accent rotate-45" />
+                    <p className="font-body text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">
+                      {edu.period} · {edu.location}
+                    </p>
+                    <div className="flex items-center gap-4 mb-1 flex-wrap">
+                      {logo && (
+                        <img src={logo} alt="" className="h-8 max-w-[110px] w-auto object-contain flex-shrink-0 opacity-90" />
+                      )}
+                      <h3 className="font-heading text-2xl text-foreground">{edu.institution}</h3>
+                    </div>
+                    <p className="font-heading text-lg italic text-accent mb-3">{edu.degree}</p>
+                    <p className="font-body text-sm text-foreground/70 leading-relaxed max-w-xl">{edu.description}</p>
+                  </li>
+                </Reveal>
+              );
+            })}
           </ul>
         </div>
         <Reveal delay={0.2}>

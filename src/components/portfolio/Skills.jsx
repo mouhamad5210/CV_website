@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import Reveal from './Reveal';
 import SectionTitle from './SectionTitle';
+import { techIcons } from '@/data/techIcons';
 
 export default function Skills() {
   const { t } = useLanguage();
@@ -19,7 +20,13 @@ export default function Skills() {
                 <ul className="space-y-3">
                   {cat.skills.map((skill) => (
                     <li key={skill} className="flex items-center gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                      <span className="w-5 flex items-center justify-center flex-shrink-0">
+                        {techIcons[skill] ? (
+                          <img src={techIcons[skill]} alt={skill} className="w-5 h-5 object-contain" />
+                        ) : (
+                          <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                        )}
+                      </span>
                       <span className="font-body text-sm text-foreground/80">{skill}</span>
                     </li>
                   ))}

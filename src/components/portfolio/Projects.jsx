@@ -5,6 +5,7 @@ import { ArrowUpRight, Github } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import Reveal from './Reveal';
 import SectionTitle from './SectionTitle';
+import { techIcons } from '@/data/techIcons';
 
 function ProjectCard({ project, index, t }) {
   const reduce = useReducedMotion();
@@ -34,7 +35,8 @@ function ProjectCard({ project, index, t }) {
         </ul>
         <div className="flex flex-wrap gap-2 mb-6">
           {project.technologies.map((tech) => (
-            <span key={tech} className="font-body text-xs px-3 py-1 border border-accent/25 text-foreground/60">
+            <span key={tech} className="inline-flex items-center gap-1.5 font-body text-xs px-3 py-1 border border-accent/25 text-foreground/60">
+              {techIcons[tech] && <img src={techIcons[tech]} alt="" className="w-3.5 h-3.5 object-contain" />}
               {tech}
             </span>
           ))}
