@@ -7,7 +7,7 @@ import SectionTitle from './SectionTitle';
 export default function About() {
   const { t } = useLanguage();
   return (
-    <section id="about" className="py-32">
+    <section id="about" className="py-20">
       <div className="max-w-3xl mx-auto px-6">
         <Reveal>
           <SectionTitle number={t.about.number} title={t.about.title} />

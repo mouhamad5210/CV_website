@@ -54,8 +54,8 @@ export default function Hero() {
               </div>
             </Reveal>
           </div>
-          <Reveal delay={0.2} className="hidden lg:flex justify-center">
-            <div className="arch-frame w-72 h-96 bg-secondary border border-accent/20 flex items-center justify-center overflow-hidden">
+          <Reveal delay={0.2} className="flex justify-center mt-8 lg:mt-0">
+            <div className="arch-frame w-48 h-60 lg:w-72 lg:h-96 bg-secondary border border-accent/20 flex items-center justify-center overflow-hidden">
               <img 
                 src={`${import.meta.env.BASE_URL}profile.png`}
                 alt="Mohamad Redwan"

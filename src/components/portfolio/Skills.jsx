@@ -7,7 +7,7 @@ import { techIcons } from '@/data/techIcons';
 export default function Skills() {
   const { t } = useLanguage();
   return (
-    <section id="skills" className="py-32 bg-white">
+    <section id="skills" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <Reveal>
           <SectionTitle number={t.skills.number} title={t.skills.title} />

@@ -60,7 +60,7 @@ function ProjectCard({ project, index, t }) {
 export default function Projects() {
   const { t } = useLanguage();
   return (
-    <section id="projects" className="py-32">
+    <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <Reveal>
           <SectionTitle number={t.projects.number} title={t.projects.title} />

@@ -21,7 +21,7 @@ export default function Education() {
   };
 
   return (
-    <section id="education" className="py-32 bg-white">
+    <section id="education" className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         <Reveal>
           <SectionTitle number={t.education.number} title={t.education.title} />
