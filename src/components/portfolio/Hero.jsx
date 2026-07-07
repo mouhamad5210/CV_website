@@ -55,11 +55,13 @@ export default function Hero() {
             </Reveal>
           </div>
           <Reveal delay={0.2} className="flex justify-center mt-8 lg:mt-0">
-            <div className="arch-frame w-48 h-60 lg:w-72 lg:h-96 bg-secondary border border-accent/20 flex items-center justify-center overflow-hidden">
+            <div className="w-48 h-60 lg:w-72 lg:h-96 bg-secondary border-2 border-accent/40 flex items-center justify-center overflow-hidden">
               <img 
-                src={`${import.meta.env.BASE_URL}profile.png`}
-                alt="Mohamad Redwan"
+                src={`${import.meta.env.BASE_URL}profile.png?v=1`}
+                alt="Mohamad Redwan Profile"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                onError={(e) => { e.target.style.display = 'none'; console.log('Image failed to load'); }}
                 style={{ transform: 'scaleX(-1)' }}
               />
             </div>
