@@ -4,11 +4,15 @@ import { useLanguage } from '@/context/LanguageContext';
 import Reveal from './Reveal';
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const scrollTo = (e, id) => {
     e.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const getCVFile = () => {
+    return `${import.meta.env.BASE_URL}cv-${lang}.pdf`;
   };
 
   return (
@@ -41,7 +45,7 @@ export default function Hero() {
                   {t.hero.viewProjects}
                 </a>
                 <a
-                  href={`${import.meta.env.BASE_URL}cv.pdf`}
+                  href={getCVFile()}
                   download
                   className="inline-flex items-center gap-3 px-7 py-3.5 border border-accent/40 text-foreground font-body text-sm uppercase tracking-[0.15em] hover:border-accent hover:text-accent transition-all duration-300"
                 >
@@ -51,8 +55,13 @@ export default function Hero() {
             </Reveal>
           </div>
           <Reveal delay={0.2} className="hidden lg:flex justify-center">
-            <div className="arch-frame w-72 h-96 bg-secondary border border-accent/20 flex items-center justify-center">
-              <span className="font-heading text-7xl text-accent/80 font-light tracking-wider">MR</span>
+            <div className="arch-frame w-72 h-96 bg-secondary border border-accent/20 flex items-center justify-center overflow-hidden">
+              <img 
+                src={`${import.meta.env.BASE_URL}profile.png`}
+                alt="Mohamad Redwan"
+                className="w-full h-full object-cover"
+                style={{ transform: 'scaleX(-1)' }}
+              />
             </div>
           </Reveal>
         </div>
