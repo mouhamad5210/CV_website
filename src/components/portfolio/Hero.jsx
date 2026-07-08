@@ -55,15 +55,24 @@ export default function Hero() {
             </Reveal>
           </div>
           <Reveal delay={0.2} className="flex justify-center mt-8 lg:mt-0">
-            <div className="w-48 h-60 lg:w-72 lg:h-96 bg-secondary border-2 border-accent/40 flex items-center justify-center overflow-hidden">
-              <img 
-                src={`${import.meta.env.BASE_URL}profile.png?v=1`}
-                alt="Mohamad Redwan Profile"
-                className="w-full h-full object-cover"
-                loading="lazy"
-                onError={(e) => { e.target.style.display = 'none'; console.log('Image failed to load'); }}
-                style={{ transform: 'scaleX(-1)' }}
-              />
+            <div className="relative w-56 h-56 lg:w-80 lg:h-80">
+              {/* Outer decorative ring - animated */}
+              <div className="absolute inset-0 rounded-full border-2 border-accent/25 animate-pulse"></div>
+              
+              {/* Middle decorative ring */}
+              <div className="absolute inset-3 lg:inset-5 rounded-full border border-accent/20"></div>
+              
+              {/* Inner circle with image */}
+              <div className="absolute inset-8 lg:inset-12 rounded-full overflow-hidden border-2 border-accent/40 bg-secondary shadow-lg">
+                <img 
+                  src={`${import.meta.env.BASE_URL}profile.png?v=1`}
+                  alt="Mohamad Redwan Profile"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  onError={(e) => { e.target.style.display = 'none'; console.log('Image failed to load'); }}
+                  style={{ transform: 'scaleX(-1)' }}
+                />
+              </div>
             </div>
           </Reveal>
         </div>
