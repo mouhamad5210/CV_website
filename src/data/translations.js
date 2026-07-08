@@ -27,11 +27,11 @@ export const translations = {
     projects: {
       number: '03', title: 'Projects', viewSource: 'GitHub', viewDetails: 'View Case Study',
       items: [
-        { slug: 'enterprise-web-app', title: 'Enterprise Web Application', category: 'Backend Development & API Design', type: 'Personal Project',
-          description: 'A robust enterprise-oriented web application built using ASP.NET Core. It streamlines data management with real-time error handling, secure authentication, and advanced filtering capabilities. The application prioritizes scalability, reliability, and user experience through strict architectural separation.',
-          highlights: ['Built an enterprise web app in ASP.NET Core with strict Separation of Concerns architecture.', 'Implemented secure authentication by customizing ASP.NET Identity.', 'Integrated Serilog for advanced diagnostics and structured runtime logging.', 'Ensured reliable business logic with AAA-model unit tests (Arrange, Act, Assert).'],
+        { slug: 'foodweb-app', title: 'Foodweb App', category: 'Backend Development & API Design', type: 'Personal Project',
+          description: 'A web application built with ASP.NET Core focused on real-time error handling, secure authentication, and robust API integration. The application emphasizes clean architecture through strict Separation of Concerns pattern, advanced filtering capabilities, and comprehensive error diagnostics for production-ready reliability.',
+          highlights: ['Developed a web application in ASP.NET Core with strict Separation of Concerns architecture.', 'Utilized scaffolding to streamline the development process for authentication.', 'Implemented Serilog logging for robust error handling and application performance tracking.', 'Ensured isolated behavior to maintain stability and reliability in functionality.', 'Performed testing using the AAA model (Arrange, Act, Assert) to verify application functionality.'],
           technologies: ['ASP.NET Core', 'C#', 'Serilog', 'SQLite', 'xUnit', 'ASP.NET Identity'],
-          link: 'https://github.com/mouhamad5210/WebApp.git' },
+          link: null },
         { slug: 'myshop-ecommerce', title: 'MyShop E-Commerce Platform', category: 'Fullstack Architecture', type: 'Personal Project',
           description: 'A complete e-commerce platform built from scratch, demonstrating strong independence in fullstack troubleshooting and database normalization. The backend delivers RESTful services with optimized LINQ queries, while the frontend provides dynamic, responsive interfaces.',
           highlights: ['Designed and built a complete e-commerce platform from scratch.', 'Backend: RESTful services with ASP.NET Core, C#, SQLite, optimized LINQ queries.', 'Frontend: Dynamic, responsive interfaces with React, HTML5, and CSHTML.', 'Robust error handling and continuous health monitoring via Serilog.'],
@@ -92,11 +92,11 @@ export const translations = {
     projects: {
       number: '03', title: 'Prosjekter', viewSource: 'GitHub', viewDetails: 'Se case',
       items: [
-        { slug: 'enterprise-web-app', title: 'Enterprise Nettsapplikasjon', category: 'Backend-utvikling & API-design', type: 'Personlig prosjekt',
-          description: 'En robust enterprise-rettet nettsapplikasjon bygget i ASP.NET Core. Den strømlinjeformer datahåndtering med sanntids feilhåndtering, sikker autentisering og avanserte filtreringsfunksjoner. Applikasjonen prioriterer skalerbarhet, pålitelighet og brukeropplevelse gjennom streng arkitektonisk separasjon.',
-          highlights: ['Utviklet en enterprise-rettet nettsapplikasjon i ASP.NET Core med streng SoC-arkitektur.', 'Implementerte sikre rutiner for autentisering ved å tilpasse ASP.NET Identity.', 'Integrerte Serilog for avansert diagnostikk og strukturert logging.', 'Sikret pålitelig forretningslogikk med AAA-modellen (Arrange, Act, Assert).'],
+        { slug: 'foodweb-app', title: 'Foodweb-app', category: 'Backend-utvikling & API-design', type: 'Personlig prosjekt',
+          description: 'En nettsapplikasjon bygget med ASP.NET Core med fokus på sanntids feilhåndtering, sikker autentisering og robust API-integrasjon. Applikasjonen legger vekt på ren arkitektur gjennom streng Separation of Concerns-mønster, avanserte filtreringsfunksjoner og omfattende feildiagnostikk for produksjonsklar pålitelighet.',
+          highlights: ['Utviklet en nettsapplikasjon i ASP.NET Core med streng Separation of Concerns-arkitektur.', 'Brukte scaffolding for å strømlinjeforme utviklingsprosessen for autentisering.', 'Implementerte Serilog-logging for robust feilhåndtering og overvåking av applikasjonsytelse.', 'Sikret isolert oppførsel for å opprettholde stabilitet og pålitelighet i funksjonaliteten.', 'Gjennomførte testing ved hjelp av AAA-modellen (Arrange, Act, Assert) for å verifisere applikasjonsoppførselen.'],
           technologies: ['ASP.NET Core', 'C#', 'Serilog', 'SQLite', 'xUnit', 'ASP.NET Identity'],
-          link: 'https://github.com/mouhamad5210/WebApp.git' },
+          link: null }
         { slug: 'myshop-ecommerce', title: 'MyShop E-handelsplattform', category: 'Fullstack-arkitektur', type: 'Personlig prosjekt',
           description: 'En komplett e-handelsplattform bygget fra bunnen av, som demonstrerer sterk selvstendighet innen fullstack-feilsøking og databasenormalisering. Backend leverer RESTful-tjenester med optimaliserte LINQ-spørringer, mens frontend gir dynamiske, responsive grensesnitt.',
           highlights: ['Designet og utviklet en komplett e-handelsplattform fra bunnen av.', 'Backend: RESTful-tjenester med ASP.NET Core, C#, SQLite og optimaliserte LINQ-spørringer.', 'Frontend: Dynamiske og responsive grensesnitt med React, HTML5 og CSHTML.', 'Robust feilhåndtering og kontinuerlig helseovervåking med Serilog.'],
