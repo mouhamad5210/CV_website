@@ -63,11 +63,11 @@ export default function Hero() {
               <div className="absolute inset-3 lg:inset-5 rounded-full border border-accent/20"></div>
               
               {/* Inner circle with image */}
-              <div className="absolute inset-8 lg:inset-12 rounded-full overflow-hidden border-2 border-accent/40 bg-secondary shadow-lg">
+              <div className="absolute inset-3 lg:inset-4 rounded-full overflow-hidden border-2 border-accent/40 bg-secondary shadow-lg">
                 <img 
                   src={`${import.meta.env.BASE_URL}profile.png?v=1`}
                   alt="Mohamad Redwan Profile"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                   loading="lazy"
                   onError={(e) => { e.target.style.display = 'none'; console.log('Image failed to load'); }}
                   style={{ transform: 'scaleX(-1)' }}
